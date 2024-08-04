@@ -68,8 +68,8 @@ func calRoman(var1, var2 int, sign string) (resultInt int) {
 	default:
 		panic("Error")
 	}
-	if resultInt < 0 {
-		panic("Ошибка: Значение ниже 0. В римской системе нет отрицательных чисел")
+	if resultInt <= 0 {
+		panic("Ошибка: Значение ниже или равно 0. В римской системе нет нуля и отрицательных чисел")
 	}
 	return resultInt
 }
@@ -130,7 +130,7 @@ func main() {
 	var varString1, varString2, sign string
 	n, err := fmt.Scanln(&varString1, &sign, &varString2)
 	if err != nil || n != 3 {
-		fmt.Println("Ошибка: введите ровно две целочисленные переменные.")
+		panic("Ошибка: введите ровно две целочисленные переменные.")
 		return
 	}
 
