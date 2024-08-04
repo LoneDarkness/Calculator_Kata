@@ -130,7 +130,7 @@ func main() {
 	var varString1, varString2, sign string
 	n, err := fmt.Scanln(&varString1, &sign, &varString2)
 	if err != nil || n != 3 {
-		panic("Ошибка: введите ровно две целочисленные переменные.")
+		panic("Ошибка: введите ровно две целочисленные переменные")
 		return
 	}
 
